@@ -168,8 +168,6 @@ function getSong(curChannel){
             var obj={title:title, sid:sid, artist:artist, url:url, picUrl:picUrl}
 
             $("audio").attr("src",url);
-            $(".toggle").addClass("active")
-
 
             playMusic();
             placeItem(obj);  //将当前歌曲信息放置到页面上
@@ -204,17 +202,11 @@ function getLyric(sid){
             sid:sid
         },
         success:function(res){
-
-            if(res.lyric){
-                lyric=res.lyric;
-            }else{
-                lyric="该歌曲暂无歌词";
-            }
+            lyric=res.lyric;
             placeLyric(lyric);   //放置歌词
         },
         error:function(){
            $(".lyric").append("<li>该歌曲暂无歌词</li>");
-            console.log(timeList)
             console.log("获取歌词失败");
         }
     })
