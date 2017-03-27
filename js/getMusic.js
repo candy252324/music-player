@@ -111,7 +111,7 @@ function getTime(){
     duration=audio.duration; 
     curTime=audio.currentTime;
 
-    if(typeof(duration)=="number"){
+    if(!isNaN(duration)){
         $(".time .duration").text(transformTime(duration));
         $(".time .curTime").text(transformTime(curTime));
     } 
@@ -155,7 +155,6 @@ function getSong(curChannel){
         url: 'http://api.jirengu.com/fm/getSong.php',
         type: 'GET',
         dataType: 'json', 
-        jsonp:"jsoncallback",
         data: {
             channel:curChannel,
         },
