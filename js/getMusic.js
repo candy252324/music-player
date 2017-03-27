@@ -6,9 +6,6 @@ var audio=$("audio")[0],
     timeList=[];
 
 
-getChannel()
-
-
 
 //播放与暂停
 $(".toggle").on("click",function(){
@@ -106,6 +103,8 @@ $(".volume-handle").on("change",function(){
 $(".like").on("click", "i" ,function(){
     $(this).toggleClass('active');
 })
+
+
 
 function getTime(){
 
@@ -267,6 +266,7 @@ function setLyricAnimation(){
 }
 
 
+$(document).ready(getChannel())
 
 
 
