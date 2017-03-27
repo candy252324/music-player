@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>音乐播放器</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/font/iconfont.css">
+
+</head>
+<body>
+
+    <audio id="audio">audio element not supported</audio>
+    <div class="wrap">
+        <div class="header" style="background: url() 50% 50%/cover no-repeat">
+            <div class="img-ct"></div>
+            <div class="lyric-wrap active">
+                <div class="lyric-ct">
+                    <ul class="lyric"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="info clearfix">
+                <div class="left">
+                    <h2 class="title"></h2>
+                    <p class="artist"></p>
+                    <p class="channel"></p>
+                </div>
+                <div class="right clearfix">
+                    <div class="like">
+                        <i class="iconfont transfer">
+                            <a href="http://service.weibo.com/share/share.php?title=#_loginLayer_1466697157538" target="_blank"">&#xe621;</a>
+                        </i>
+                        <i class="iconfont star">&#xf005b;</i>
+                        <i class="iconfont heart">&#xf000b;</i>
+                    </div>
+                    <!-- <canvas id="myCanvas" style="width: 200px;height: 100px;"></canvas> -->
+                </div>
+            </div>
+            <div class="time">
+                <span class="curTime">00:00</span>
+                <span class="duration">00:00</span>
+            </div>
+            <div class="range">
+                <div class="range-bg"></div>
+                <div class="progress"></div>
+            </div> 
+            <div class="control clearfix">
+                <div class="icon-btn1">
+                    <span class="toggle active" title="播放/暂停">
+                        <i class="iconfont start">&#xe61b;</i>
+                        <i class="iconfont stop">&#xe61f;</i>
+                    </span>
+                    <i class="iconfont forward" title="下一首">&#xed2c;</i>
+                    <i class="iconfont change-channel" title="切换频道">&#xe733;</i>
+                </div>
+                <div class="icon-btn2">
+                    <span class="volume active">
+                        <i class="iconfont noise">&#xe61d;</i>
+                        <i class="iconfont mute">&#xe506;</i>
+                    </span>
+                     <input type="range" class="volume-handle" value="60" min="0" max="100">
+                    <div class="cycle-lyric">
+                        <i class="iconfont cycle" title="单曲循环">&#xe628;</i>
+                        <i class="iconfont lyric-toggle" title="歌词">&#xe62a;</i>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>  
+        
+    </div>
+
+
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/toolFunction.js"></script>
+    <script type="text/javascript" src="./js/getMusic.js"></script>
+    
+    <!-- <script type="text/javascript" src="./js/visualize.js"></script> -->
+ 
+
+</body>
+</html>
