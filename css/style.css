@@ -54,12 +54,14 @@ li{
 	overflow: hidden;
 }
 .header .lyric{
-	position: relative;
-	top:105px;
-	line-height: 25px;
-	font-size: 12px;
+	padding-top:105px;
 	text-align: center;
 	transition: all .5s;
+}
+.header .lyric li{
+	height: 25px;
+	line-height: 25px;
+	font-size: 12px;
 }
 .header .lyric li.active{
 	color:orange;

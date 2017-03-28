@@ -239,17 +239,18 @@ function placeLyric(lyric){
 function setLyricAnimation(){ 
 
     for(var i=0; i<timeList.length; i++){ 
+
         if(timeList[i]<=curTime&&curTime<=timeList[i+1]){
             if($(".lyric li").eq(i).html()){  //li标签必须有内容
-               
+                
                 $(".lyric li").removeClass("active");
                 $(".lyric li").eq(i).addClass("active");
-                
-                var liH=$(".lyric li").eq(i).outerHeight(true);
 
-                 $(".lyric").css({
-                    "margin-top": "-"+liH*(i-5)+"px",
+                var liH=$(".lyric li").eq(i).outerHeight(true);
+                $(".lyric").css({
+                    "margin-top": "-"+liH*i+"px",
                 })
+                
                 break;
             }
         }
